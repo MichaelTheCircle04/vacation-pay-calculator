@@ -1,0 +1,86 @@
+[
+    {
+    "nameHolidayDate": "1 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 1,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "2 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 2,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "3 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 3,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "4 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 4,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "5 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 5,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "6 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 6,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "7 января",
+    "nameHoliday": "Рождество Христово",
+    "day": 7,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "8 января",
+    "nameHoliday": "Новогодние каникулы",
+    "day": 8,
+    "month": 1
+    },
+    {
+    "nameHolidayDate": "23 февраля",
+    "nameHoliday": "День защитника Отечества",
+    "day": 23,
+    "month": 2
+    },
+    {
+    "nameHolidayDate": "8 марта",
+    "nameHoliday": "Международный женский день",
+    "day": 8,
+    "month": 3
+    },
+    {
+    "nameHolidayDate": "1 мая",
+    "nameHoliday": "Праздник Весны и Труда",
+    "day": 1,
+    "month": 5
+    },
+    {
+    "nameHolidayDate": "9 мая",
+    "nameHoliday": "День Победы",
+    "day": 9,
+    "month": 5
+    },
+    {
+    "nameHolidayDate": "12 июня",
+    "nameHoliday": "День России",
+    "day": 12,
+    "month": 6
+    },
+    {
+    "nameHolidayDate": "4 ноября",
+    "nameHoliday": "День народного единства",
+    "day": 4,
+    "month": 11
+    }
+]

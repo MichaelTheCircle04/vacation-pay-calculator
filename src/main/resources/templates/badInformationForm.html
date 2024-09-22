@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Bad form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="calculate" method="get">            
+            <b>Форма была заполнена не верно:</b>
+            <p th:text="${exception}"></p><br>
+            <b>Хотите попробовать заполнить еще раз?</b><br>
+            <input type="submit" value="Заполнить снова">
+        </form>    
+    </body>
+</html>

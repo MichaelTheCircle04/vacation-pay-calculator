@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Calculations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <b>Сумма Ваших отпускных:</b><br>
+        <p> <span th:text="${cash}"></span> руб.</p>
+        <b>Во время Вашего отпуска будут следующие нерабочие дни:</b><br>
+        <tr th:each="holiday : ${holidays}">
+            <td th:text="${holiday.nameHolidayDate}"></td>
+            <td th:text="${holiday.nameHoliday}"></td>
+            <br>
+        </tr>   
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Collecting information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="/calculate" method="POST">
+            <b>Введите вашу среднюю З/П за 12 месяцев: </b> <input type="number" name="averageSalary" required> руб.<br>
+            <b>Укажите когда планируете уйти в отпуск: </b> <input type="date" name="firstDay" required> <br>
+            <b>Укажите когда планируете выйти на работу: </b> <input type="date" name="lastDay" required> <br>
+            <p><input type="submit" value="Отправить">
+               <input type="reset" value="Очистить">
+            </p>
+        </form>    
+    </body>
+</html>
