@@ -38,4 +38,5 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
     </dependencies>
+    <name>vacation-pay-calculator</name>
 </project>
