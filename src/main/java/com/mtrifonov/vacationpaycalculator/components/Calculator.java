@@ -1,6 +1,7 @@
 package com.mtrifonov.vacationpaycalculator.components;
 
 import lombok.AllArgsConstructor;
+import java.util.Collections;
 import org.springframework.stereotype.Component;
 import com.mtrifonov.vacationpaycalculator.domain.CalculationsDTO;
 import com.mtrifonov.vacationpaycalculator.domain.VacationInfo;
@@ -23,7 +24,9 @@ public class Calculator {
             
             Double dayPayment = info.getAverageSalary() / 29.3;
             Double totalAmount = dayPayment * info.getNumberOfDays();
-            return CalculationsDTO.builder().totalAmount(totalAmount.intValue()).build();
+            return CalculationsDTO.builder()
+                .totalAmount(totalAmount.intValue())
+                .holidays(Collections.emptyList()).build();
         } else {
             
             var holidays = holidayCalendar.calculateWorkingDays(info);

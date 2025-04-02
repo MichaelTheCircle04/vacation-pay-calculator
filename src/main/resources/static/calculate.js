@@ -32,7 +32,7 @@ function submitForm() {
         body: jsonData
     })
     .then(resp => {
-        console.log(resp);
+
         if (resp.status === 200) {
             return resp.json(); // Возвращаем промис
         } else {
@@ -40,27 +40,34 @@ function submitForm() {
         }
     })
     .then(resolved => {
-        console.log(resolved);
+
         document.getElementById("message").innerHTML = "Calculated";
         document.getElementById("message").style = "color: green";
         
-        let amount = document.createElement("span"); // Изменил на "div" вместо "amount"
+        let amount = document.createElement("span");
         amount.innerHTML = "Сумма ваших отпускных: " + resolved.totalAmount;
-        document.body.appendChild(amount); // Добавляем элемент на страницу
+        document.body.appendChild(amount); 
+        document.body.appendChild(document.createElement("br"));
         
-        //написать про праздничные дни
-        let table = document.createElement("table"); // Изменил на "table" вместо "result"
+        if (resolved.holidays.length !== 0) {
+
+            let txt = document.createElement("span");
+            txt.innerHTML = "Праздничные дни в период вашего отпуска:";
+            document.body.appendChild(txt);
+            document.body.appendChild(document.createElement("br"));
+
+            let table = document.createElement("table");
         
-        resolved.holidays.forEach(h => { // Используем forEach для перебора массива
-            let r = table.insertRow();
-            let c1 = r.insertCell();
-            let c2 = r.insertCell();
-            c1.innerHTML = h.date; // Исправлено на h.date
-            c2.innerHTML = h.nameHoliday; // Исправлено на h.nameHoliday
-        });
-    
-        document.body.appendChild(table); // Добавляем таблицу на страницу
-    
+            resolved.holidays.forEach(h => { 
+                let r = table.insertRow();
+                let c1 = r.insertCell();
+                let c2 = r.insertCell();
+                c1.innerHTML = h.date; 
+                c2.innerHTML = h.nameHoliday; 
+            });
+        
+            document.body.appendChild(table); // Добавляем таблицу на страницу
+        }
     }, rejected => {
         rejected.then(errorData => { // Обрабатываем ошибку
             document.getElementById("message").innerHTML = errorData.exception;
