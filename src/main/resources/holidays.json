@@ -1,86 +1,58 @@
 [
     {
-    "nameHolidayDate": "1 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 1,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-01"
     },
     {
-    "nameHolidayDate": "2 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 2,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-02"
     },
     {
-    "nameHolidayDate": "3 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 3,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-03"
     },
     {
-    "nameHolidayDate": "4 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 4,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-04"
     },
     {
-    "nameHolidayDate": "5 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 5,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-05"
     },
     {
-    "nameHolidayDate": "6 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 6,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-06"
     },
     {
-    "nameHolidayDate": "7 января",
-    "nameHoliday": "Рождество Христово",
-    "day": 7,
-    "month": 1
+        "nameHoliday": "Рождество Христово",
+        "date": "2025-01-07"
     },
     {
-    "nameHolidayDate": "8 января",
-    "nameHoliday": "Новогодние каникулы",
-    "day": 8,
-    "month": 1
+        "nameHoliday": "Новогодние каникулы",
+        "date": "2025-01-08"
     },
     {
-    "nameHolidayDate": "23 февраля",
-    "nameHoliday": "День защитника Отечества",
-    "day": 23,
-    "month": 2
+        "nameHoliday": "День защитника Отечества",
+        "date": "2025-02-23"
     },
     {
-    "nameHolidayDate": "8 марта",
-    "nameHoliday": "Международный женский день",
-    "day": 8,
-    "month": 3
+        "nameHoliday": "Международный женский день",
+        "date": "2025-03-08"
     },
     {
-    "nameHolidayDate": "1 мая",
-    "nameHoliday": "Праздник Весны и Труда",
-    "day": 1,
-    "month": 5
+        "nameHoliday": "Праздник Весны и Труда",
+        "date": "2025-05-01"
     },
     {
-    "nameHolidayDate": "9 мая",
-    "nameHoliday": "День Победы",
-    "day": 9,
-    "month": 5
+        "nameHoliday": "День Победы",
+        "date": "2025-05-09"
     },
     {
-    "nameHolidayDate": "12 июня",
-    "nameHoliday": "День России",
-    "day": 12,
-    "month": 6
+        "nameHoliday": "День России",
+        "date": "2025-06-12"
     },
     {
-    "nameHolidayDate": "4 ноября",
-    "nameHoliday": "День народного единства",
-    "day": 4,
-    "month": 11
+        "nameHoliday": "День народного единства",
+        "date": "2025-11-04"
     }
 ]

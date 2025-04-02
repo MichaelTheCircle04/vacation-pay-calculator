@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Collecting information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <span id="message"></span><br>
+        <form action="/calculate" method="POST" id="information">
+            <b>Введите вашу среднюю З/П за 12 месяцев: </b> <input type="number" id="averageSalary" required> руб.<br>
+            <b>Уажите колличество дней в отпуске (если не указываете даты): </b> <input type="number" id="numberOfDays"><br>
+            <b>Укажите когда планируете уйти в отпуск: </b> <input type="date" id="firstDay"> <br>
+            <b>Укажите когда планируете выйти на работу: </b> <input type="date" id="lastDay"> <br>
+            <p>
+               <button type="button" onclick="submitForm()">Рассчитать</button>
+               <button type="button" onclick="reload()">Очистить</button>
+            </p>
+        </form>
+        <script type="text/javascript" th:src="@{/calculate.js}"></script>    
+    </body>
+</html>

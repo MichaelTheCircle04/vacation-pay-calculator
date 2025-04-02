@@ -1,14 +1,17 @@
-
 package com.mtrifonov.vacationpaycalculator.controllers;
 
-import com.mtrifonov.vacationpaycalculator.Calculator;
-import com.mtrifonov.vacationpaycalculator.VacationInfo;
-import javax.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.mtrifonov.vacationpaycalculator.components.Calculator;
+import com.mtrifonov.vacationpaycalculator.domain.CalculationsDTO;
+import com.mtrifonov.vacationpaycalculator.domain.VacationInfo;
+import com.mtrifonov.vacationpaycalculator.validators.VacationInfoValidator;
+import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
+import java.time.temporal.ChronoUnit;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -17,33 +20,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 @RequestMapping("/calculate")
+@AllArgsConstructor
 public class CalculatorController {
     
     private final Calculator calculator;
-            
-    @Autowired
-    public CalculatorController(Calculator calculator) {
-        this.calculator = calculator;
-    }
       
     @GetMapping
-    public String produceMainForm() {
-        return "mainForm";
+    public String produceMainPage() {
+        return "main";
     }
-    
-    @PostMapping("/customize")
-    public String produceCustomForm(HttpServletRequest request) {
-        if (request.getParameter("inf").equals("yes")) {
-            return "formWithDates";
-        }
-        return "formWithoutDates";
-    }
-    
+
     @PostMapping
-    public String handleForm(HttpServletRequest request, Model model) { 
-        VacationInfo info = VacationInfo.initializeVacationInfo(request.getParameterMap());
-        Double cash = calculator.calculate(info, model);
-        model.addAttribute("cash", cash.intValue());
-        return "calculations";   
+    public ResponseEntity<CalculationsDTO> calculate(@Valid @RequestBody VacationInfo info) {
+
+        VacationInfoValidator.validate(info);
+
+        if (info.getFirstDay().isPresent()) {
+            info.setNumberOfDays((int) ChronoUnit.DAYS.between(info.getFirstDay().get(), info.getLastDay().get()));
+        }
+
+        var result = calculator.calculate(info);
+        return ResponseEntity.ok(result);
     }
 }
